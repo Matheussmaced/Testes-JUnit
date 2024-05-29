@@ -6,9 +6,14 @@ package maven;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.time.LocalDate;
+
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test
+    void validarCalculoDeIdade() {
+        Pessoa pessoa = new Pessoa("Matheus", LocalDate.of(2001, 3, 10));
+        assertEquals(2, pessoa.getIdade());
+
     }
+
 }
